@@ -13,3 +13,14 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.nome
+    
+
+class Usuario(models.Model):
+    nome = models.CharField(max_length=100)
+    RE = models.CharField(max_length=10)
+    email = models.EmailField()
+    senha = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nome
+
