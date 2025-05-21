@@ -31,8 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'estoque.apps.EstoqueConfig',   
-    'django.contrib.admin',
+    'rest_framework',
+    'estoque',   
+    'django.contrib.admin', 
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
