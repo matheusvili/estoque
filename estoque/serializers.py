@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from estoque.models import Categoria, Produto
+from estoque.models import Categoria, Produto, Usuario
 
 class CategoriaSerializer(ModelSerializer):
     class Meta:
@@ -9,4 +9,9 @@ class CategoriaSerializer(ModelSerializer):
 class ProdutoSerializer(ModelSerializer):
     class Meta:
         model = Produto
+        fields = '__all__'
+
+class UsuarioSerializer(ModelSerializer):
+    class Meta:
+        model = Usuario
         fields = '__all__'
