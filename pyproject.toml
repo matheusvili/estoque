@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "matheus", email = "viliczinskimatheusjose@gmail.com"},
 ]
-dependencies = ["django>=5.2.1", "djangorestframework>=3.16.0"]
+dependencies = ["django>=5.2.1", "djangorestframework>=3.16.0", "djangorestframework-simplejwt>=5.5.0", "django-cors-headers>=4.7.0"]
 requires-python = "==3.13.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -14,4 +14,8 @@ license = {text = "MIT"}
 distribution = false
 
 [tool.pdm.scripts]
+<<<<<<< HEAD
 dev = "python manage.py runserver 0.0.0.0:8000"
+=======
+dev = "python manage.py runserver"
+>>>>>>> bd3f0c1608896a14dc8b6921e6f5866daca35abb

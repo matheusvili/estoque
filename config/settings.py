@@ -26,17 +26,33 @@ SECRET_KEY = 'django-insecure-$!c9xyjcw@@b9yci_vw-i1!#_v1c=r!0ay-!9vttd=ni&!+5fv
 DEBUG = True
 
 ALLOWED_HOSTS = [
+<<<<<<< HEAD
     '979lmp-8000.csb.app',
     '0.0.0.0',
 ]
+=======
+    'mgfmg6-8000.csb.app',
+    '979lmp-8000.csb.app',
+    '0.0.0.0',
+]
+
+CSRF_TRUSTED_ORIGINS = ['https://mgfmg6-8000.csb.app']
+>>>>>>> bd3f0c1608896a14dc8b6921e6f5866daca35abb
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'rest_framework',
+<<<<<<< HEAD
     'estoque',
     'django.contrib.admin',
+=======
+    'rest_framework_simplejwt',
+    'estoque',
+    'corsheaders',   
+    'django.contrib.admin', 
+>>>>>>> bd3f0c1608896a14dc8b6921e6f5866daca35abb
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -45,6 +61,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,6 +69,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://61e8b1a8-0f09-44c5-8504-35e0686b57af-00-3mhc2og8jh3an.kirk.repl.co",
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -70,6 +91,12 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
