@@ -64,6 +64,8 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://61e8b1a8-0f09-44c5-8504-35e0686b57af-00-3mhc2og8jh3an.kirk.repl.co",
+    "https://61e8b1a8-0f09-44c5-8504-35e0686b57af-00-3mhc2og8jh3an.kirk.replit.dev/",
+    "https://estoque-manutencao-whirlpool.vercel.app/"
 ]
 
 ROOT_URLCONF = 'config.urls'
