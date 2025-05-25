@@ -25,15 +25,18 @@ SECRET_KEY = 'django-insecure-$!c9xyjcw@@b9yci_vw-i1!#_v1c=r!0ay-!9vttd=ni&!+5fv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '979lmp-8000.csb.app',
+    '0.0.0.0',
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'rest_framework',
-    'estoque',   
-    'django.contrib.admin', 
+    'estoque',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
