@@ -26,33 +26,24 @@ SECRET_KEY = 'django-insecure-$!c9xyjcw@@b9yci_vw-i1!#_v1c=r!0ay-!9vttd=ni&!+5fv
 DEBUG = True
 
 ALLOWED_HOSTS = [
-<<<<<<< HEAD
-    '979lmp-8000.csb.app',
-    '0.0.0.0',
-]
-=======
-    'mgfmg6-8000.csb.app',
-    '979lmp-8000.csb.app',
-    '0.0.0.0',
+    'estoque-b8sm.onrender.com',
+    'localhost',
+    '127.0.0.1',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://mgfmg6-8000.csb.app']
->>>>>>> bd3f0c1608896a14dc8b6921e6f5866daca35abb
+CSRF_TRUSTED_ORIGINS = [
+    'https://estoque-b8sm.onrender.com',
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'rest_framework',
-<<<<<<< HEAD
     'estoque',
-    'django.contrib.admin',
-=======
     'rest_framework_simplejwt',
-    'estoque',
     'corsheaders',   
     'django.contrib.admin', 
->>>>>>> bd3f0c1608896a14dc8b6921e6f5866daca35abb
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
