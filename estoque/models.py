@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Categoria(models.Model):
     nome = models.CharField(max_length=100)
 
@@ -38,5 +39,15 @@ class Adiministrador(models.Model):
 
     def __str__(self):
         return self.nome
+    
+
+class Historico(models.Model):
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    data = models.DateTimeField(default=timezone.now)
+    quantidade = models.IntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.produto.nome} - {self.usuario.nome} - {self.data}"
     
 

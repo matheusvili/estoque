@@ -14,8 +14,4 @@ license = {text = "MIT"}
 distribution = false
 
 [tool.pdm.scripts]
-<<<<<<< HEAD
-dev = "python manage.py runserver 0.0.0.0:8000"
-=======
 dev = "python manage.py runserver"
->>>>>>> bd3f0c1608896a14dc8b6921e6f5866daca35abb

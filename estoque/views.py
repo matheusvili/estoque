@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from estoque.models import Categoria, Produto, Usuario, Adiministrador
-from estoque.serializers import CategoriaSerializer, ProdutoSerializer, UsuarioSerializer, AdiministradorSerializer
+from estoque.models import Categoria, Produto, Usuario, Adiministrador, Historico 
+from estoque.serializers import CategoriaSerializer, ProdutoSerializer, UsuarioSerializer, AdiministradorSerializer, HistoricoSerializer
 
 class CategoriaViewSet(viewsets.ModelViewSet):
     queryset = Categoria.objects.all()
@@ -17,3 +17,7 @@ class UsuarioViewSet(viewsets.ModelViewSet):
 class AdiministradorViewSet(viewsets.ModelViewSet):
     queryset = Adiministrador.objects.all()
     serializer_class = AdiministradorSerializer
+
+class HistoricoViewSet(viewsets.ModelViewSet):
+    queryset = Historico.objects.all()
+    serializer_class = HistoricoSerializer
