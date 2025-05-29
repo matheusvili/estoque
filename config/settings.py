@@ -37,13 +37,13 @@ CSRF_TRUSTED_ORIGINS = [
 
 
 # Application definition
-
 INSTALLED_APPS = [
-    'rest_framework',
+    'uploader',
     'estoque',
+    'rest_framework',
     'rest_framework_simplejwt',
-    'corsheaders',   
-    'django.contrib.admin', 
+    'corsheaders',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

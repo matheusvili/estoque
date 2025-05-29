@@ -4,8 +4,14 @@ version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
     {name = "matheus", email = "viliczinskimatheusjose@gmail.com"},
+    {name = "matheusvili", email = "viliczinskimj@gmail.com"},
 ]
-dependencies = ["django>=5.2.1", "djangorestframework>=3.16.0", "djangorestframework-simplejwt>=5.5.0", "django-cors-headers>=4.7.0"]
+dependencies = [
+    "django>=5.2.1",
+    "djangorestframework>=3.16.0",
+    "djangorestframework-simplejwt>=5.5.0",
+    "django-cors-headers>=4.7.0",
+]
 requires-python = "==3.13.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -15,3 +21,6 @@ distribution = false
 
 [tool.pdm.scripts]
 dev = "python manage.py runserver"
+migrate = "python manage.py migrate"
+
+post_migrate="python manage.py graph_models --disable-sort-fields -S -g -o core.png core uploader"
