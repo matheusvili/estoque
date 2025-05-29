@@ -29,17 +29,19 @@ ALLOWED_HOSTS = [
     'estoque-b8sm.onrender.com',
     'localhost',
     '127.0.0.1',
+    '979lmp-8000.csb.app',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://estoque-b8sm.onrender.com',
+    'https://979lmp-8000.csb.app',
 ]
 
 
 # Application definition
 INSTALLED_APPS = [
     'uploader',
-    'estoque',
+    'estoque_main',
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
@@ -69,6 +71,9 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 ROOT_URLCONF = 'config.urls'
+MEDIA_ENDPOINT = '/media/'  
+MEDIA_ROOT = BASE_DIR / 'media'
+
 
 TEMPLATES = [
     {

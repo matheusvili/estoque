@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from estoque.models import Categoria
+from estoque_main.models import Categoria
 class CategoriaSerializer(ModelSerializer):
     class Meta:
         model = Categoria

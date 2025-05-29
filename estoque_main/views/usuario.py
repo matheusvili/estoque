@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from estoque.models import Usuario
-from estoque.serializers.usuario import UsuarioSerializer
+from estoque_main.models import Usuario
+from estoque_main.serializers.usuario import UsuarioSerializer
 
 class UsuarioViewSet(ModelViewSet):
     queryset = Usuario.objects.all()
