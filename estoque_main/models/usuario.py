@@ -8,7 +8,8 @@ class Usuario(models.Model):
 
     def __str__(self):
         return self.nome
-class Meta:
-    verbose_name = "Usuário"
-    verbose_name_plural = "Usuários"
-    ordering = ["nome"]
+
+    class Meta:
+        verbose_name = "Usuário"
+        verbose_name_plural = "Usuários"
+        ordering = ["nome"]
