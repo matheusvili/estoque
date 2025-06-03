@@ -10,3 +10,8 @@ class Administrador(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Meta:
+        verbose_name = "Administrador"
+        verbose_name_plural = "Administradores"
+        ordering = ["nome"]
