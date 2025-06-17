@@ -1,5 +1,5 @@
 from django.db import models
-from .usuario import Usuario
+from usuario.models import Usuario
 from .produto import Produto  
 
 class Retirada(models.Model):

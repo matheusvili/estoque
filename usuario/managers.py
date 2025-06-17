@@ -4,32 +4,32 @@ from django.utils.translation import gettext_lazy as _
 
 class CustomUserManager(BaseUserManager):
     """
-    Custom user model manager where email is the unique identifiers
+    Custom user model manager where RE is the unique identifier
     for authentication instead of usernames.
     """
 
-    def create_user(self, email, password, **extra_fields):
+    def create_user(self, re, password=None, **extra_fields):
         """
-        Create and save a user with the given email and password.
+        Cria e salva um usuário com o RE e senha fornecidos.
         """
-        if not email:
-            raise ValueError(_("The Email must be set"))
-        email = self.normalize_email(email)
-        user = self.model(email=email, **extra_fields)
+        if not re:
+            raise ValueError(_("O campo RE deve ser preenchido."))
+        user = self.model(re=re, **extra_fields)
         user.set_password(password)
-        user.save()
+        user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, password, **extra_fields):
+    def create_superuser(self, re, password=None, **extra_fields):
         """
-        Create and save a SuperUser with the given email and password.
+        Cria e salva um superusuário com o RE e senha fornecidos.
         """
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
         extra_fields.setdefault("is_active", True)
 
         if extra_fields.get("is_staff") is not True:
-            raise ValueError(_("Superuser must have is_staff=True."))
+            raise ValueError(_("O superusuário precisa ter is_staff=True."))
         if extra_fields.get("is_superuser") is not True:
-            raise ValueError(_("Superuser must have is_superuser=True."))
-        return self.create_user(email, password, **extra_fields)
+            raise ValueError(_("O superusuário precisa ter is_superuser=True."))
+
+        return self.create_user(re, password, **extra_fields)

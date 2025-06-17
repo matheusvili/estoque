@@ -97,6 +97,10 @@ REST_FRAMEWORK = {
     )
 }
 
+AUTHENTICATION_BACKENDS = [
+    'usuarios.backends.REBackend',  # use o nome correto do app
+]
+
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
