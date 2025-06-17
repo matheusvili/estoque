@@ -29,21 +29,24 @@ ALLOWED_HOSTS = [
     'estoque-b8sm.onrender.com',
     'localhost',
     '127.0.0.1',
+    '979lmp-8000.csb.app',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://estoque-b8sm.onrender.com',
+    'https://979lmp-8000.csb.app',
 ]
 
 
 # Application definition
-
 INSTALLED_APPS = [
+    'usuario',
+    'uploader',
+    'estoque_main',
     'rest_framework',
-    'estoque',
     'rest_framework_simplejwt',
-    'corsheaders',   
-    'django.contrib.admin', 
+    'corsheaders',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -69,6 +72,9 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 ROOT_URLCONF = 'config.urls'
+MEDIA_ENDPOINT = '/media/'  
+MEDIA_ROOT = BASE_DIR / 'media'
+
 
 TEMPLATES = [
     {
@@ -145,3 +151,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'usuario.Usuario'
+# Custom user model
