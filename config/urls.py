@@ -7,7 +7,7 @@ from rest_framework.routers import DefaultRouter
 from django.conf import settings
 from django.conf.urls.static import static
 
-from estoque_main.views import AdministradorViewSet, CategoriaViewSet, ProdutoViewSet, UsuarioViewSet, HistoricoViewSet
+from estoque_main.views import AdministradorViewSet, CategoriaViewSet, ProdutoViewSet, UsuarioViewSet, HistoricoViewSet, RetiradaViewSet
 
 router = DefaultRouter()
 router.register(r'admin', AdministradorViewSet, basename='admin')
@@ -15,6 +15,7 @@ router.register(r'categorias', CategoriaViewSet  , basename='categoria')
 router.register(r'historicos', HistoricoViewSet, basename='historico')
 router.register(r'produtos', ProdutoViewSet, basename='produto')
 router.register(r'usuarios', UsuarioViewSet, basename='usuario')
+router.register(r'retiradas', RetiradaViewSet, basename='retirada')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
