@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from estoque_main.models import Retirada, ItemRetirada
-from usuario.models import Usuario
+from usuarios.models import Usuario
 from estoque_main.serializers.itemRetirada import ItemRetiradaSerializer
 
 class RetiradaSerializer(serializers.ModelSerializer):
