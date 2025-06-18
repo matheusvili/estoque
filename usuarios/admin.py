@@ -11,8 +11,10 @@ class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = Usuario
+
     list_display = (
         "email",
+        "re",  
         "is_staff",
         "is_active",
     )
@@ -25,16 +27,11 @@ class CustomUserAdmin(UserAdmin):
         (None, {"fields": ("email", "password")}),
         (
             _("Personal info"),
-            {
-                "fields": (
-                    "first_name",
-                    "last_name",
-                )
-            },
+            {"fields": ("first_name", "last_name")},
         ),
         (
-            _("Personal info"),
-            {"fields": ("cpf", "telefone", "data_nascimento")},
+            _("Informações adicionais"),
+            {"fields": ("cpf", "telefone", "data_nascimento", "re")}, 
         ),
         (
             _("Permissions"),
@@ -51,6 +48,10 @@ class CustomUserAdmin(UserAdmin):
                     "email",
                     "password1",
                     "password2",
+                    "cpf",
+                    "telefone",
+                    "data_nascimento",
+                    "re",  
                     "is_staff",
                     "is_active",
                     "groups",
@@ -59,6 +60,6 @@ class CustomUserAdmin(UserAdmin):
             },
         ),
     )
-    search_fields = ("email",)
+    search_fields = ("email", "re")  
     ordering = ("email",)
     readonly_fields = ["date_joined", "last_login"]

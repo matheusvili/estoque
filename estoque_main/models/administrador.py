@@ -1,5 +1,5 @@
 from django.db import models
-from .usuario import Usuario
+from usuarios.models import Usuario
 
 class Administrador(models.Model):
     usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE)

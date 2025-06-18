@@ -40,7 +40,7 @@ CSRF_TRUSTED_ORIGINS = [
 
 # Application definition
 INSTALLED_APPS = [
-    'usuario',
+    'usuarios',
     'uploader',
     'estoque_main',
     'rest_framework',
@@ -72,7 +72,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 ROOT_URLCONF = 'config.urls'
-MEDIA_ENDPOINT = '/media/'  
+MEDIA_ENDPOINT = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
@@ -96,6 +96,10 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+AUTHENTICATION_BACKENDS = [
+    'usuarios.backends.REBackend',  # use o nome correto do app
+]
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -151,5 +155,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = 'usuario.Usuario'
+AUTH_USER_MODEL = 'usuarios.Usuario'
 # Custom user model
