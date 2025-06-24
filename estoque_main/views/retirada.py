@@ -1,12 +1,12 @@
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny
 from estoque_main.models import Retirada
 from estoque_main.serializers import RetiradaSerializer
 
 class RetiradaViewSet(viewsets.ModelViewSet):
     queryset = Retirada.objects.all().prefetch_related('itens__produto', 'usuario')
     serializer_class = RetiradaSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
 
 def get_queryset(self):
     user = self.request.user

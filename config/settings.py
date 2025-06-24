@@ -30,11 +30,13 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '979lmp-8000.csb.app',
+    'ggfq4c-8000.csb.app'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://estoque-b8sm.onrender.com',
     'https://979lmp-8000.csb.app',
+    'https://ggfq4c-8000.csb.app',
 ]
 
 
