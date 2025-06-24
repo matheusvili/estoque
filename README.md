@@ -20,6 +20,6 @@ Backend do sistema de controle de estoque e almoxarifado virtual desenvolvido co
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/estoque-manutencao-backend.git
+git clone
 cd estoque-manutencao-backend
 ```
