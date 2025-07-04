@@ -15,6 +15,10 @@ class Retirada(models.Model):
     status = models.IntegerField(
         choices=StatusRetirada.choices, default=StatusRetirada.CARRINHO)
     data = models.DateTimeField(auto_now_add=True)
+    observacoes = models.TextField(blank=True, null=True)  # ✅ Adicionado aqui
+
+    def __str__(self):
+        return f"Retirada #{self.id} - {self.usuario.nome}"
 
     def __str__(self):
         return f"Retirada #{self.id} - {self.usuario.nome}"

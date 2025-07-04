@@ -9,7 +9,7 @@ class RetiradaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Retirada
-        fields = ['id', 'usuario', 'usuario_nome', 'status', 'data', 'itens']
+        fields = '__all__'
 
     def create(self, validated_data):
         itens_data = validated_data.pop('itens')
