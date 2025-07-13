@@ -23,3 +23,16 @@ Backend do sistema de controle de estoque e almoxarifado virtual desenvolvido co
 git clone
 cd estoque-manutencao-backend
 ```
+
+
+### 2. Criar um ambiente virtual
+
+```bash
+python -m venv venv
+
+venv\Scripts\activate    // no Windows
+
+source venv/bin/activate  // no Linux
+
+```
+
